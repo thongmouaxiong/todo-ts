@@ -1,0 +1,167 @@
+.wrap{
+  position: relative;
+}
+.ctn-wrap {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  grid-row-gap: 1.5rem;
+  grid-template-columns: repeat(3, 30vw);
+}
+.div-wrap {
+  position: relative;
+  background: #77adff;
+  /* min-width: 380px; */
+  min-height: 140px;
+  max-height: 140px;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 10px #000;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  justify-content: space-between;
+}
+.wrap-task {
+  pointer-events: none;
+}
+
+
+.link-to{
+  z-index: 10;
+  color:#000;
+}
+.link-to:hover{
+  color:#000;
+  cursor: default;
+}
+
+.icon-add {
+  margin: 0.6rem;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  justify-self: start;
+}
+
+.div-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
+.div-wrap span {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.time-wrap {
+  /* position: absolute; */
+
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0;
+}
+
+.p-status {
+    /* position: absolute; */
+    left: 10px;
+    bottom: 0;
+}
+
+.btn-container {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  color: rgb(255, 255, 255);
+  z-index: 99;
+
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+.i-edit:hover {
+  color: blue;
+}
+.i-done:hover {
+  color: green;
+}
+.i-delete:hover {
+  color: rgb(223, 0, 11);  
+}
+.i-delete path, .i-done path{
+  pointer-events: none;
+}
+
+.user-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  margin: 10px auto ;
+  padding: 5px 1rem;
+  background-color: #1e6ce2;
+  font-size: .8rem;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+
+}
+
+.status-wrap{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 1rem;
+  border-radius: 5px;
+}
+
+.status-item:hover {
+  background-color: #77ADFF;
+  cursor: pointer;
+}
+
+.item-click{
+  background-color: #77ADFF;
+}
+
+@media screen and (max-width: 960px) {
+  .ctn-wrap {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .ctn-wrap {
+    grid-template-columns: repeat(1, 90vw);
+  }
+
+  .user-wrap{
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+}
